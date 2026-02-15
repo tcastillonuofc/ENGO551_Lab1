@@ -1,0 +1,46 @@
+﻿{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Header Bar Content -->
+<header>
+    <h1 class="header-title"> Welcome to Plato's Library, {{username}}. </h1>
+</header>
+
+<main>
+    <form method="post" action="{{ url_for('search') }}">
+
+        <div class="center-wrap">
+            <div class="box">
+                <h2 class="main-header"> Please search for a book. </h2>
+
+                <div class="input-wrapper">
+                    <input type="text" name="user_search" placeholder="Search for ISBN, name, or author." />
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="button-style" type="submit" name="action" value="search">
+                        Search
+                    </button>
+                    <button class="button-style" type="submit" name="action" value="logout">
+                        Logout
+                    </button>
+                </div>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="flash-wrapper">
+                    {% for message in messages %}
+                    <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+
+        
+
+    </form>
+</main>
+
+{% endblock %}

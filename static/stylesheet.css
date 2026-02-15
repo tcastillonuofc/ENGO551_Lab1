@@ -1,0 +1,151 @@
+/* Created by Titus Castillon UCID 30156837 */
+/* SCSS Variables */
+body {
+  background-color: #f2dbc5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #588157;
+  font-family: "Times New Roman", sans serif;
+  color: white;
+}
+header .header-title {
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+
+main {
+  margin-top: 100px;
+  padding: 10px;
+  font-family: "Times New Roman", sans serif;
+  text-align: center;
+  color: white;
+}
+main .main-title {
+  font-size: 35px;
+}
+main .main-header {
+  font-size: 25px;
+}
+
+.center-wrap {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.box {
+  width: clamp(420px, 33.33vw, 1500px);
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #bd9c7a;
+}
+
+.input-wrapper, .button-wrapper {
+  margin-bottom: 15px;
+}
+
+.input-wrapper input, .button-wrapper input {
+  width: 80%;
+  padding: 12px 14px;
+  font-size: 20px;
+  font-family: "Times New Roman", sans serif;
+}
+
+.input-wrapper input:focus, .button-wrapper input:focus {
+  border-color: #f2dbc5;
+  font-family: "Times New Roman", sans serif;
+  box-shadow: 3px dimgray;
+}
+
+.button-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button-style {
+  width: 200px;
+  height: 45px;
+  background-color: #588157;
+  font-family: "Times New Roman", sans serif;
+  font-size: 20px;
+  border: 2px solid #588157;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.button-style:hover {
+  background-color: #7ea77d;
+  color: white;
+  border: 2px solid #7ea77d;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.flash-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.flash-message {
+  padding: 15px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: black;
+}
+
+.center-wrap {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.result-card {
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: #f2dbc5;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.result-text {
+  background-color: #bd9c7a;
+  border-radius: 6px;
+  padding: 10px 12px;
+  flex: 1;
+}
+
+.result-text p {
+  margin: 0;
+  color: white;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

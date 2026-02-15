@@ -1,0 +1,35 @@
+﻿<!-- Created by Titus Castillon, UCID 30156837 -->
+
+<!DOCTYPE html>
+
+<html>
+<!-- Metadata and CSS Styling -->
+<head>
+    <!-- Website Metadata -->
+    <title>Plato's Library</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}" />
+
+    <style>
+        #id-body-background {
+            background-image: url("{{ url_for('static', filename='library.jpeg') }}");
+            background-size: cover; /* fills screen */
+            background-position: center; /* keeps subject centered */
+            background-repeat: no-repeat; /* no tiling */
+            background-attachment: fixed; /* optional: "parallax" feel */
+        }
+    </style>
+</head>
+
+
+
+<body id="id-body-background">
+
+    <!-- Inherited Content -->
+    {% block body %}
+    {% endblock %}
+
+</body>
+
+</html>

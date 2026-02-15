@@ -1,0 +1,35 @@
+﻿{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Header Bar Content -->
+<header>
+    <h1 class="header-title"> Welcome to Plato's Library, {{username}}. </h1>
+</header>
+
+<main>
+    <div class="center-wrap">
+        <div class="box">
+
+            <h2 class="main-header">Search Results:</h2>
+            <form method="post" action="{{ url_for('view_book') }}">
+                <div class="button-wrapper">
+                    <button class="button-style" type="submit" name="action" value="home" }}">
+                        Go back to Home
+                    </button>
+                </div>
+            </form>
+
+            <h2 class="main-header"> Book information: </h2>
+            <h2 class="main-header"> ISBN: {{book.isbn}}</h2>
+            <h2 class="main-header"> Title: {{book.title}}</h2>
+            <h2 class="main-header"> Author: {{book.author}}</h2>
+            <h2 class="main-header"> Year: {{book.year}}</h2>
+
+
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

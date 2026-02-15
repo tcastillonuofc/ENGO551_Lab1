@@ -1,0 +1,49 @@
+﻿{% extends "layout.html" %}
+
+{% block heading %}
+    Test Heading inheritance.html
+{% endblock %}
+
+{% block body %}
+
+<main>
+    <form class="form" method="post" action="{{ url_for('authenticate') }}">
+
+        <div class="center-wrap">
+            <div class="box">
+                <h1 class="main-title"> Welcome to Plato's Library</h1>
+                <h2 class="main-header"> Please log in to continue. </h2>
+
+                <div class="input-wrapper">
+                    <input type="text" name="username" placeholder="Please enter your username." />
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" name="password" placeholder="Please enter your password." />
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="button-style" type="submit" name="action" value="login">
+                        Sign In
+                    </button>
+                    <button class="button-style" type="submit" name="action" value="register">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-wrapper">
+            {% for message in messages %}
+            <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+    </form>
+</main>
+
+{% endblock %}
